@@ -1,28 +1,31 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions>
-    <Transaction>2023.11.17 23:59:44.035,=C:\Users\vladislav\Documents\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
-    <Transaction>2023.11.17 23:59:44.145,=C:\Users\vladislav\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
-    <Transaction>2023.11.17 23:59:57.024,D:\BSUIR\course-2\course_project\src\main.h=C:\Users\vladislav\Documents\Embarcadero\Studio\Projects\Unit1.h</Transaction>
-    <Transaction>2023.11.17 23:59:57.024,D:\BSUIR\course-2\course_project\src\main.dfm=C:\Users\vladislav\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
-    <Transaction>2023.11.17 23:59:57.024,D:\BSUIR\course-2\course_project\src\main.cpp=C:\Users\vladislav\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
-    <Transaction>2023.11.18 00:00:06.607,D:\BSUIR\course-2\course_project\src\project.h=C:\Users\vladislav\Documents\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
-    <Transaction>2023.11.18 00:00:16.967,D:\BSUIR\course-2\course_project\src\ManagementSystem.cbproj=C:\Users\vladislav\Documents\Embarcadero\Studio\Projects\Project2.cbproj</Transaction>
-    <Transaction>2023.11.18 00:05:01.250,=D:\BSUIR\course-2\course_project\src\Unit1.cpp</Transaction>
-    <Transaction>2023.11.18 00:05:12.142,D:\BSUIR\course-2\course_project\src\units\user.dfm=D:\BSUIR\course-2\course_project\src\Unit1.dfm</Transaction>
-    <Transaction>2023.11.18 00:05:12.142,D:\BSUIR\course-2\course_project\src\units\user.cpp=D:\BSUIR\course-2\course_project\src\Unit1.cpp</Transaction>
-    <Transaction>2023.11.18 00:05:12.142,D:\BSUIR\course-2\course_project\src\units\user.h=D:\BSUIR\course-2\course_project\src\Unit1.h</Transaction>
-    <Transaction>2023.11.18 00:05:34.551,=D:\BSUIR\course-2\course_project\src\Unit1.cpp</Transaction>
-    <Transaction>2023.11.18 00:05:42.051,D:\BSUIR\course-2\course_project\src\units\admin.h=D:\BSUIR\course-2\course_project\src\Unit1.h</Transaction>
-    <Transaction>2023.11.18 00:05:42.051,D:\BSUIR\course-2\course_project\src\units\admin.dfm=D:\BSUIR\course-2\course_project\src\Unit1.dfm</Transaction>
-    <Transaction>2023.11.18 00:05:42.051,D:\BSUIR\course-2\course_project\src\units\admin.cpp=D:\BSUIR\course-2\course_project\src\Unit1.cpp</Transaction>
-    <Transaction>2023.11.18 00:13:20.360,=D:\BSUIR\course-2\course_project\src\Unit1.cpp</Transaction>
-    <Transaction>2023.11.18 00:13:33.602,D:\BSUIR\course-2\course_project\src\units\info.dfm=D:\BSUIR\course-2\course_project\src\Unit1.dfm</Transaction>
-    <Transaction>2023.11.18 00:13:33.602,D:\BSUIR\course-2\course_project\src\units\info.cpp=D:\BSUIR\course-2\course_project\src\Unit1.cpp</Transaction>
-    <Transaction>2023.11.18 00:13:33.602,D:\BSUIR\course-2\course_project\src\units\info.h=D:\BSUIR\course-2\course_project\src\Unit1.h</Transaction>
-    <Transaction>2023.11.18 00:23:26.845,=D:\BSUIR\course-2\course_project\src\Unit1.cpp</Transaction>
-    <Transaction>2023.11.18 00:23:55.453,D:\BSUIR\course-2\course_project\src\units\edit.dfm=D:\BSUIR\course-2\course_project\src\Unit1.dfm</Transaction>
-    <Transaction>2023.11.18 00:23:55.453,D:\BSUIR\course-2\course_project\src\units\edit.h=D:\BSUIR\course-2\course_project\src\Unit1.h</Transaction>
-    <Transaction>2023.11.18 00:23:55.453,D:\BSUIR\course-2\course_project\src\units\edit.cpp=D:\BSUIR\course-2\course_project\src\Unit1.cpp</Transaction>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.142,D:\BSUIR\course-2\course_project\src\Unit1.cpp=D:\BSUIR\course-2\course_project\src\units\user.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.360,=D:\BSUIR\course-2\course_project\src\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.721,=D:\BSUIR\course-2\course_project\src\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.051,D:\BSUIR\course-2\course_project\src\Unit1.dfm=D:\BSUIR\course-2\course_project\src\units\admin.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.035,=C:\Users\vladislav\Documents\Embarcadero\Studio\Projects\Project2PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.607,C:\Users\vladislav\Documents\Embarcadero\Studio\Projects\Project2PCH1.h=D:\BSUIR\course-2\course_project\src\project.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.250,=D:\BSUIR\course-2\course_project\src\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.051,D:\BSUIR\course-2\course_project\src\Unit1.cpp=D:\BSUIR\course-2\course_project\src\units\admin.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.602,D:\BSUIR\course-2\course_project\src\Unit1.cpp=D:\BSUIR\course-2\course_project\src\units\info.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.526,D:\BSUIR\course-2\course_project\src\Unit1.cpp=D:\BSUIR\course-2\course_project\src\structures\data.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.551,=D:\BSUIR\course-2\course_project\src\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.845,=D:\BSUIR\course-2\course_project\src\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.453,D:\BSUIR\course-2\course_project\src\Unit1.cpp=D:\BSUIR\course-2\course_project\src\units\edit.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.526,D:\BSUIR\course-2\course_project\src\Unit1.h=D:\BSUIR\course-2\course_project\src\structures\data.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.453,D:\BSUIR\course-2\course_project\src\Unit1.h=D:\BSUIR\course-2\course_project\src\units\edit.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.967,C:\Users\vladislav\Documents\Embarcadero\Studio\Projects\Project2.cbproj=D:\BSUIR\course-2\course_project\src\ManagementSystem.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.051,D:\BSUIR\course-2\course_project\src\Unit1.h=D:\BSUIR\course-2\course_project\src\units\admin.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.602,D:\BSUIR\course-2\course_project\src\Unit1.h=D:\BSUIR\course-2\course_project\src\units\info.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.142,D:\BSUIR\course-2\course_project\src\Unit1.h=D:\BSUIR\course-2\course_project\src\units\user.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.024,C:\Users\vladislav\Documents\Embarcadero\Studio\Projects\Unit1.h=D:\BSUIR\course-2\course_project\src\main.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.142,D:\BSUIR\course-2\course_project\src\Unit1.dfm=D:\BSUIR\course-2\course_project\src\units\user.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.602,D:\BSUIR\course-2\course_project\src\Unit1.dfm=D:\BSUIR\course-2\course_project\src\units\info.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.453,D:\BSUIR\course-2\course_project\src\Unit1.dfm=D:\BSUIR\course-2\course_project\src\units\edit.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.024,C:\Users\vladislav\Documents\Embarcadero\Studio\Projects\Unit1.cpp=D:\BSUIR\course-2\course_project\src\main.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.145,=C:\Users\vladislav\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.024,C:\Users\vladislav\Documents\Embarcadero\Studio\Projects\Unit1.dfm=D:\BSUIR\course-2\course_project\src\main.dfm</Transaction>
   </Transactions>
 </BorlandProject>

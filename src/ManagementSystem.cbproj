@@ -64,8 +64,8 @@
         <Icon_MainIcon>$(BDS)\bin\cbuilder_PROJECTICON.ico</Icon_MainIcon>
         <UWP_CppLogo44>$(BDS)\bin\Artwork\Windows\UWP\cppreg_UwpDefault_44.png</UWP_CppLogo44>
         <UWP_CppLogo150>$(BDS)\bin\Artwork\Windows\UWP\cppreg_UwpDefault_150.png</UWP_CppLogo150>
-        <IncludePath>units\;D:\BSUIR\course-2\course_project\src\;$(IncludePath)</IncludePath>
-        <ILINK_LibraryPath>units\;D:\BSUIR\course-2\course_project\src\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
+        <IncludePath>structures\;units\;D:\BSUIR\course-2\course_project\src\;$(IncludePath)</IncludePath>
+        <ILINK_LibraryPath>structures\;units\;D:\BSUIR\course-2\course_project\src\;$(ILINK_LibraryPath)</ILINK_LibraryPath>
         <SanitizedProjectName>ManagementSystem</SanitizedProjectName>
     </PropertyGroup>
     <PropertyGroup Condition="'$(Base_Win32)'!=''">
@@ -137,6 +137,10 @@
             <BuildOrder>1</BuildOrder>
             <PCH>true</PCH>
         </PCHCompile>
+        <CppCompile Include="structures\data.cpp">
+            <DependentOn>structures\data.h</DependentOn>
+            <BuildOrder>7</BuildOrder>
+        </CppCompile>
         <CppCompile Include="units\admin.cpp">
             <Form>frmAdmin</Form>
             <FormType>dfm</FormType>
@@ -161,11 +165,11 @@
             <DependentOn>units\user.h</DependentOn>
             <BuildOrder>3</BuildOrder>
         </CppCompile>
-        <FormResources Include="main.dfm"/>
-        <FormResources Include="units\user.dfm"/>
         <FormResources Include="units\admin.dfm"/>
-        <FormResources Include="units\info.dfm"/>
         <FormResources Include="units\edit.dfm"/>
+        <FormResources Include="units\info.dfm"/>
+        <FormResources Include="units\user.dfm"/>
+        <FormResources Include="main.dfm"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

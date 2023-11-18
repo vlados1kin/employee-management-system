@@ -96,48 +96,33 @@ object frmEdit: TfrmEdit
     Height = 23
     TabOrder = 1
   end
-  object editRole: TEdit
-    Left = 117
-    Top = 79
-    Width = 121
-    Height = 23
-    TabOrder = 2
-  end
   object editFIO: TEdit
     Left = 117
     Top = 109
     Width = 121
     Height = 23
-    TabOrder = 3
-  end
-  object Edit5: TEdit
-    Left = 117
-    Top = 141
-    Width = 121
-    Height = 23
-    TabOrder = 4
-    Text = 'Edit1'
+    TabOrder = 2
   end
   object editEducation: TEdit
     Left = 117
     Top = 170
     Width = 121
     Height = 23
-    TabOrder = 5
+    TabOrder = 3
   end
   object editInstitution: TEdit
     Left = 117
     Top = 199
     Width = 121
     Height = 23
-    TabOrder = 6
+    TabOrder = 4
   end
   object editSpecialization: TEdit
     Left = 117
     Top = 228
     Width = 121
     Height = 23
-    TabOrder = 7
+    TabOrder = 5
   end
   object editGraduationYear: TEdit
     Left = 117
@@ -145,14 +130,14 @@ object frmEdit: TfrmEdit
     Width = 121
     Height = 23
     NumbersOnly = True
-    TabOrder = 8
+    TabOrder = 6
   end
   object editTelephone: TEdit
     Left = 117
     Top = 286
     Width = 121
     Height = 23
-    TabOrder = 9
+    TabOrder = 7
   end
   object btnEnter: TButton
     Left = 25
@@ -160,7 +145,7 @@ object frmEdit: TfrmEdit
     Width = 96
     Height = 25
     Caption = #1043#1086#1090#1086#1074#1086
-    TabOrder = 10
+    TabOrder = 8
     OnClick = btnEnterClick
   end
   object btnExit: TButton
@@ -169,7 +154,25 @@ object frmEdit: TfrmEdit
     Width = 96
     Height = 25
     Caption = #1042#1099#1081#1090#1080
-    TabOrder = 11
+    TabOrder = 9
     OnClick = btnExitClick
+  end
+  object editBirthdate: TMaskEdit
+    Left = 117
+    Top = 141
+    Width = 121
+    Height = 23
+    EditMask = '!0000/99/99;0;_'
+    MaxLength = 10
+    TabOrder = 10
+    Text = ''
+  end
+  object boxRole: TComboBox
+    Left = 117
+    Top = 80
+    Width = 121
+    Height = 23
+    Style = csDropDownList
+    TabOrder = 11
   end
 end
