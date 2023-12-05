@@ -45,8 +45,9 @@ object frmAdmin: TfrmAdmin
     Top = 87
     Width = 249
     Height = 25
-    Caption = #1059#1087#1088#1072#1074#1083#1077#1085#1080#1077' '#1089#1087#1080#1089#1086#1082' '#1079#1072#1076#1072#1095
+    Caption = #1059#1087#1088#1072#1074#1083#1077#1085#1080#1077' '#1089#1087#1080#1089#1082#1086#1084' '#1079#1072#1076#1072#1095
     TabOrder = 2
+    OnClick = btnTaskClick
   end
   object btnFinance: TButton
     Left = 16
@@ -55,6 +56,7 @@ object frmAdmin: TfrmAdmin
     Height = 25
     Caption = #1059#1087#1088#1072#1074#1083#1077#1085#1080#1077' '#1092#1080#1085#1072#1085#1089#1072#1084#1080
     TabOrder = 3
+    OnClick = btnFinanceClick
   end
   object btnRole: TButton
     Left = 16
@@ -63,5 +65,6 @@ object frmAdmin: TfrmAdmin
     Height = 25
     Caption = #1059#1087#1088#1072#1074#1083#1077#1085#1080#1077' '#1076#1086#1089#1090#1091#1087#1086#1084
     TabOrder = 4
+    OnClick = btnRoleClick
   end
 end

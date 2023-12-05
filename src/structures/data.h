@@ -37,14 +37,21 @@ struct Salary {
 	string login;
 	string department;
 	string position;
-	float money[12];
+    string month;
+	int salary;
 };
-extern Employee temp, curr;
-extern vector<Employee> v;
+extern Employee curr;
+extern vector<Employee> emp_vec;
+extern vector<Task> task_vec;
+extern vector<Salary> slr_vec;
 extern int u;
 
-void ReadEmployee();
-void SaveEmployee();
+void ReadEmployee(string path);
+void SaveEmployee(string path);
+void ReadTask(string path);
+void SaveTask(string path);
+void ReadSalary(string path);
+void SaveSalary(string path);
 bool CheckPassword(string login, string password);
 bool EmployeeExists(string login);
 

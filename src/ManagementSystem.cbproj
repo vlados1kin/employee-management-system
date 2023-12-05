@@ -157,6 +157,12 @@
             <DependentOn>units\info.h</DependentOn>
             <BuildOrder>5</BuildOrder>
         </CppCompile>
+        <CppCompile Include="units\task.cpp">
+            <Form>frmTask</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>units\task.h</DependentOn>
+            <BuildOrder>8</BuildOrder>
+        </CppCompile>
         <CppCompile Include="units\user.cpp">
             <Form>frmUser</Form>
             <FormType>dfm</FormType>
@@ -168,6 +174,7 @@
         <FormResources Include="units\info.dfm"/>
         <FormResources Include="units\user.dfm"/>
         <FormResources Include="main.dfm"/>
+        <FormResources Include="units\task.dfm"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

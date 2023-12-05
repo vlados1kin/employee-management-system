@@ -21,6 +21,9 @@ __published:	// IDE-managed Components
 	void __fastcall btnExitClick(TObject *Sender);
 	void __fastcall btnInfoClick(TObject *Sender);
 	void __fastcall FormShow(TObject *Sender);
+	void __fastcall btnTaskClick(TObject *Sender);
+	void __fastcall btnFinanceClick(TObject *Sender);
+	void __fastcall btnRoleClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TfrmAdmin(TComponent* Owner);

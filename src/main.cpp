@@ -20,7 +20,9 @@ TfrmMain *frmMain;
 __fastcall TfrmMain::TfrmMain(TComponent* Owner)
 	: TForm(Owner)
 {
-	ReadEmployee();
+	ReadEmployee("files/employee.txt");
+	ReadTask("files/task.txt");
+	ReadSalary("files/salary.txt");
 }
 //---------------------------------------------------------------------------
 void __fastcall TfrmMain::btnEnterClick(TObject *Sender)
@@ -44,7 +46,9 @@ void __fastcall TfrmMain::btnShowClick(TObject *Sender)
 //---------------------------------------------------------------------------
 void __fastcall TfrmMain::FormClose(TObject *Sender, TCloseAction &Action)
 {
-	SaveEmployee();
+	SaveEmployee("files/employee.txt");
+	SaveTask("files/task.txt");
+	SaveSalary("files/salary.txt");
 }
 //---------------------------------------------------------------------------
 void __fastcall TfrmMain::editPasswordKeyPress(TObject *Sender, System::WideChar &Key)

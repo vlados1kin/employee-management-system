@@ -34,53 +34,77 @@ object frmInfo: TfrmInfo
       86
       103
       132
-      193
-      223
-      248)
+      97
+      76
+      120)
   end
   object btnAdd: TButton
     Left = 8
-    Top = 9
+    Top = 11
     Width = 75
-    Height = 25
+    Height = 23
     Caption = #1044#1086#1073#1072#1074#1080#1090#1100
     TabOrder = 1
     OnClick = btnAddClick
   end
   object btnDelete: TButton
     Left = 89
-    Top = 9
+    Top = 11
     Width = 75
-    Height = 25
+    Height = 23
     Caption = #1059#1076#1072#1083#1080#1090#1100
     TabOrder = 2
     OnClick = btnDeleteClick
   end
   object btnEdit: TButton
     Left = 170
-    Top = 9
+    Top = 11
     Width = 75
-    Height = 25
+    Height = 23
     Caption = #1048#1079#1084#1077#1085#1080#1090#1100
     TabOrder = 3
     OnClick = btnEditClick
   end
-  object btnSave: TButton
-    Left = 251
-    Top = 9
-    Width = 75
-    Height = 25
-    Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100
-    TabOrder = 4
-    Visible = False
-  end
   object btnExit: TButton
     Left = 332
-    Top = 9
+    Top = 11
     Width = 75
-    Height = 25
+    Height = 23
     Caption = #1042#1099#1081#1090#1080
-    TabOrder = 5
+    TabOrder = 4
     OnClick = btnExitClick
+  end
+  object cmbSearch: TComboBox
+    Left = 413
+    Top = 11
+    Width = 145
+    Height = 23
+    Style = csDropDownList
+    TabOrder = 5
+  end
+  object editSearch: TEdit
+    Left = 564
+    Top = 11
+    Width = 121
+    Height = 23
+    TabOrder = 6
+  end
+  object btnSearch: TButton
+    Left = 251
+    Top = 11
+    Width = 75
+    Height = 23
+    Caption = #1055#1086#1080#1089#1082
+    TabOrder = 7
+    OnClick = btnSearchClick
+  end
+  object btnClear: TButton
+    Left = 950
+    Top = 12
+    Width = 75
+    Height = 22
+    Caption = #1054#1073#1085#1086#1074#1080#1090#1100
+    TabOrder = 8
+    OnClick = btnClearClick
   end
 end

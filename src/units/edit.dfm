@@ -170,7 +170,7 @@ object frmEdit: TfrmEdit
   end
   object boxRole: TComboBox
     Left = 117
-    Top = 80
+    Top = 79
     Width = 121
     Height = 23
     Style = csDropDownList
