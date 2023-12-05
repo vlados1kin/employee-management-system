@@ -11,6 +11,7 @@ object frmEdit: TfrmEdit
   Font.Name = 'Segoe UI'
   Font.Style = []
   OnClose = FormClose
+  OnShow = FormShow
   TextHeight = 15
   object lblLogin: TLabel
     Left = 77

@@ -10,6 +10,7 @@ object frmMain: TfrmMain
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  OnClose = FormClose
   TextHeight = 15
   object lblLogin: TLabel
     Left = 16
@@ -78,5 +79,6 @@ object frmMain: TfrmMain
     Height = 23
     PasswordChar = '*'
     TabOrder = 4
+    OnKeyPress = editPasswordKeyPress
   end
 end

@@ -37,6 +37,8 @@ __published:	// IDE-managed Components
 	void __fastcall btnEnterClick(TObject *Sender);
 	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
 	void __fastcall btnExitClick(TObject *Sender);
+	void __fastcall FormShow(TObject *Sender);
+    void __fastcall updateForm();
 private:	// User declarations
 public:		// User declarations
 	__fastcall TfrmEdit(TComponent* Owner);

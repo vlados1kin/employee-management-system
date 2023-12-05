@@ -4,6 +4,7 @@
 #pragma hdrstop
 
 #include "admin.h"
+#include "data.h"
 
 #include "main.h"
 #include "info.h"
@@ -34,3 +35,10 @@ void __fastcall TfrmAdmin::btnInfoClick(TObject *Sender)
 	frmInfo->Show();
 }
 //---------------------------------------------------------------------------
+void __fastcall TfrmAdmin::FormShow(TObject *Sender)
+{
+	auto s = "Добро пожаловать, " + curr.fio + "!";
+	lblHello->Caption = s.c_str();
+}
+//---------------------------------------------------------------------------
+

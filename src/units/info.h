@@ -12,7 +12,7 @@
 class TfrmInfo : public TForm
 {
 __published:	// IDE-managed Components
-	TStringGrid *StringGrid1;
+	TStringGrid *stgMain;
 	TButton *btnAdd;
 	TButton *btnDelete;
 	TButton *btnEdit;
@@ -21,6 +21,10 @@ __published:	// IDE-managed Components
 	void __fastcall btnExitClick(TObject *Sender);
 	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
 	void __fastcall btnAddClick(TObject *Sender);
+	void __fastcall FormShow(TObject *Sender);
+	void __fastcall btnDeleteClick(TObject *Sender);
+	void __fastcall updateStringGrid();
+	void __fastcall btnEditClick(TObject *Sender);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TfrmInfo(TComponent* Owner);
