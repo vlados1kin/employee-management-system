@@ -23,9 +23,9 @@ object frmAdmin: TfrmAdmin
     Caption = #1044#1086#1073#1088#1086' '#1087#1086#1078#1072#1083#1086#1074#1072#1090#1100', '#1072#1076#1084#1080#1085#1080#1089#1090#1088#1072#1090#1086#1088'!'
   end
   object btnExit: TButton
-    Left = 96
-    Top = 196
-    Width = 89
+    Left = 79
+    Top = 180
+    Width = 122
     Height = 25
     Caption = #1042#1099#1081#1090#1080
     TabOrder = 0
@@ -58,13 +58,13 @@ object frmAdmin: TfrmAdmin
     TabOrder = 3
     OnClick = btnFinanceClick
   end
-  object btnRole: TButton
+  object btnMe: TButton
     Left = 16
     Top = 149
-    Width = 249
+    Width = 250
     Height = 25
-    Caption = #1059#1087#1088#1072#1074#1083#1077#1085#1080#1077' '#1076#1086#1089#1090#1091#1087#1086#1084
+    Caption = #1054#1073#1086' '#1084#1085#1077
     TabOrder = 4
-    OnClick = btnRoleClick
+    OnClick = btnMeClick
   end
 end

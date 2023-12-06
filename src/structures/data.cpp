@@ -155,7 +155,7 @@ bool CheckPassword(string login, string password)
 	for (auto &temp : emp_vec) {
 		if (temp.login == login && temp.password == password) {
 			res = true;
-			curr = temp;
+			emp_curr = temp;
 		}
 	}
 	return res;
@@ -175,5 +175,7 @@ bool EmployeeExists(string login)
 vector<Employee> emp_vec;
 vector<Task> task_vec;
 vector<Salary> slr_vec;
-Employee curr;
-int u;
+Employee emp_curr;
+Task task_curr;
+Salary slr_curr;
+int emp_choice;

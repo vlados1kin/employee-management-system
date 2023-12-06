@@ -157,11 +157,23 @@
             <DependentOn>units\info.h</DependentOn>
             <BuildOrder>5</BuildOrder>
         </CppCompile>
+        <CppCompile Include="units\me.cpp">
+            <Form>frmMe</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>units\me.h</DependentOn>
+            <BuildOrder>10</BuildOrder>
+        </CppCompile>
         <CppCompile Include="units\task.cpp">
             <Form>frmTask</Form>
             <FormType>dfm</FormType>
             <DependentOn>units\task.h</DependentOn>
             <BuildOrder>8</BuildOrder>
+        </CppCompile>
+        <CppCompile Include="units\taskedit.cpp">
+            <Form>frmTaskEdit</Form>
+            <FormType>dfm</FormType>
+            <DependentOn>units\taskedit.h</DependentOn>
+            <BuildOrder>9</BuildOrder>
         </CppCompile>
         <CppCompile Include="units\user.cpp">
             <Form>frmUser</Form>
@@ -169,12 +181,14 @@
             <DependentOn>units\user.h</DependentOn>
             <BuildOrder>3</BuildOrder>
         </CppCompile>
-        <FormResources Include="units\admin.dfm"/>
         <FormResources Include="units\edit.dfm"/>
         <FormResources Include="units\info.dfm"/>
+        <FormResources Include="units\task.dfm"/>
+        <FormResources Include="units\taskedit.dfm"/>
         <FormResources Include="units\user.dfm"/>
         <FormResources Include="main.dfm"/>
-        <FormResources Include="units\task.dfm"/>
+        <FormResources Include="units\admin.dfm"/>
+        <FormResources Include="units\me.dfm"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

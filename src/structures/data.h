@@ -40,11 +40,13 @@ struct Salary {
     string month;
 	int salary;
 };
-extern Employee curr;
+extern Employee emp_curr;
+extern Task task_curr;
+extern Salary slr_curr;
 extern vector<Employee> emp_vec;
 extern vector<Task> task_vec;
 extern vector<Salary> slr_vec;
-extern int u;
+extern int emp_choice;
 
 void ReadEmployee(string path);
 void SaveEmployee(string path);

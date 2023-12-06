@@ -42,7 +42,7 @@ void __fastcall TfrmInfo::FormClose(TObject *Sender, TCloseAction &Action)
 //---------------------------------------------------------------------------
 void __fastcall TfrmInfo::btnAddClick(TObject *Sender)
 {
-	u = -1;
+	emp_choice = -1;
 	frmInfo->Hide();
 	frmEdit->Show();
 }
@@ -56,7 +56,7 @@ void __fastcall TfrmInfo::FormShow(TObject *Sender)
 
 void __fastcall TfrmInfo::btnDeleteClick(TObject *Sender)
 {
-	if (emp_vec[stgMain->Row-1].login != curr.login) {
+	if (emp_vec[stgMain->Row-1].login != emp_curr.login) {
 		emp_vec.erase(emp_vec.begin() + stgMain->Row-1);
 		frmInfo->updateStringGrid();
 	} else {
@@ -92,7 +92,7 @@ void __fastcall TfrmInfo::updateStringGrid()
 }
 void __fastcall TfrmInfo::btnEditClick(TObject *Sender)
 {
-	u = stgMain->Row-1;
+	emp_choice = stgMain->Row-1;
 	frmInfo->Hide();
 	frmEdit->Show();
 	frmInfo->updateStringGrid();

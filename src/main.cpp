@@ -8,7 +8,7 @@
 #pragma hdrstop
 
 #include "main.h"
-
+#include "me.h"
 #include "admin.h"
 #include "data.h"
 using namespace std;
@@ -67,8 +67,13 @@ void __fastcall TfrmMain::nextForm()
 	string password = string(passwordAnsi.c_str());
 
 	if (CheckPassword(login, password)) {
-		frmAdmin->Show();
-		frmMain->Hide();
+		if (emp_curr.role == "admin") {
+			frmAdmin->Show();
+			frmMain->Hide();
+		} else {
+			frmMe->Show();
+			frmMain->Hide();
+		}
 	} else {
 		ShowMessage("Неверный логин или пароль");
 	}

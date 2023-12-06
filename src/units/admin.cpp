@@ -9,6 +9,7 @@
 #include "main.h"
 #include "info.h"
 #include "task.h"
+#include "me.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -38,7 +39,7 @@ void __fastcall TfrmAdmin::btnInfoClick(TObject *Sender)
 //---------------------------------------------------------------------------
 void __fastcall TfrmAdmin::FormShow(TObject *Sender)
 {
-	auto s = "Добро пожаловать, " + curr.fio + "!";
+	auto s = "Добро пожаловать, " + emp_curr.fio + "!";
 	lblHello->Caption = s.c_str();
 }
 //---------------------------------------------------------------------------
@@ -59,6 +60,13 @@ void __fastcall TfrmAdmin::btnFinanceClick(TObject *Sender)
 void __fastcall TfrmAdmin::btnRoleClick(TObject *Sender)
 {
     //
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TfrmAdmin::btnMeClick(TObject *Sender)
+{
+	frmMe->Show();
+    frmAdmin->Hide();
 }
 //---------------------------------------------------------------------------
 
