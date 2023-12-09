@@ -20,7 +20,6 @@ __published:	// IDE-managed Components
 	TLabel *lblFIO;
 	TStringGrid *stgMain;
 	TButton *btnAdd;
-	TButton *btnEdit;
 	TButton *btnDelete;
 	void __fastcall btnExitClick(TObject *Sender);
 	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);

@@ -1,6 +1,7 @@
 //---------------------------------------------------------------------------
 
 #include <vcl.h>
+#include <sstream>
 #pragma hdrstop
 
 #include "info.h"
@@ -11,6 +12,7 @@
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
+using namespace std;
 TfrmInfo *frmInfo;
 //---------------------------------------------------------------------------
 __fastcall TfrmInfo::TfrmInfo(TComponent* Owner)
@@ -25,7 +27,6 @@ __fastcall TfrmInfo::TfrmInfo(TComponent* Owner)
 	cmbSearch->Items->Add("УО");
 	cmbSearch->Items->Add("Специализация");
 	cmbSearch->Items->Add("Год окончания");
-	cmbSearch->Items->Add("Телефон");
 	cmbSearch->ItemIndex = 0;
 }
 //---------------------------------------------------------------------------
@@ -92,59 +93,120 @@ void __fastcall TfrmInfo::updateStringGrid()
 }
 void __fastcall TfrmInfo::btnEditClick(TObject *Sender)
 {
-	emp_choice = stgMain->Row-1;
+	string login = AnsiString(stgMain->Cells[0][stgMain->Row]).c_str();
+	int i = 0;
+	for (auto &temp : emp_vec) {
+		if (temp.login == login) {
+			emp_choice = i;
+		}
+		i++;
+	}
 	frmInfo->Hide();
 	frmEdit->Show();
 	frmInfo->updateStringGrid();
 }
 //---------------------------------------------------------------------------
-void __fastcall TfrmInfo::search(string poleForSerach, string strForSearch)
+void __fastcall TfrmInfo::search(string poleForSearch, string strForSearch)
 {
 	int row = 1;
-    frmInfo->clearStringGrid();
-	if (poleForSerach == "Логин") {
+	frmInfo->clearStringGrid();
+	if (poleForSearch == "Логин") {
 		for (int i = 0; i < emp_vec.size(); i++) {
 			if (strForSearch == emp_vec[i].login) {
-				stgMain->Cells[0][row] = emp_vec[i].login.c_str();
-				stgMain->Cells[1][row] = emp_vec[i].password.c_str();
-				stgMain->Cells[2][row] = emp_vec[i].role.c_str();
-				stgMain->Cells[3][row] = emp_vec[i].fio.c_str();
-				stgMain->Cells[4][row] = IntToStr(emp_vec[i].birthdate_year) + "." + IntToStr(emp_vec[i].birthdate_month) + "." + IntToStr(emp_vec[i].birthdate_day);
-				stgMain->Cells[5][row] = emp_vec[i].education.c_str();
-				stgMain->Cells[6][row] = emp_vec[i].institution.c_str();
-				stgMain->Cells[7][row] = emp_vec[i].specialization.c_str();
-				stgMain->Cells[8][row] = IntToStr(emp_vec[i].graduation_year);
-				stgMain->Cells[9][row] = emp_vec[i].telephone.c_str();
+				Print(row, i);
 				row++;
 			}
 		}
 	}
-	if (poleForSerach == "Пароль") {
+	if (poleForSearch == "Пароль") {
+		for (int i = 0; i < emp_vec.size(); i++) {
+			if (strForSearch == emp_vec[i].password) {
+				Print(row, i);
+				row++;
+			}
+		}
+	}
+	if (poleForSearch == "Роль") {
+		for (int i = 0; i < emp_vec.size(); i++) {
+			if (strForSearch == emp_vec[i].role) {
+				Print(row, i);
+				row++;
+			}
+		}
 
 	}
-	if (poleForSerach == "Роль") {
+	if (poleForSearch == "ФИО") {
+		for (int i = 0; i < emp_vec.size(); i++) {
+			if (strForSearch == emp_vec[i].fio) {
+				Print(row, i);
+				row++;
+			}
+		}
 
 	}
-	if (poleForSerach == "ФИО") {
+	if (poleForSearch == "Образование") {
+		for (int i = 0; i < emp_vec.size(); i++) {
+			if (strForSearch == emp_vec[i].education) {
+				Print(row, i);
+				row++;
+			}
+		}
 
 	}
-	if (poleForSerach == "День рождения") {
+	if (poleForSearch == "УО") {
+    	for (int i = 0; i < emp_vec.size(); i++) {
+			if (strForSearch == emp_vec[i].institution) {
+				Print(row, i);
+				row++;
+			}
+		}
 
 	}
-	if (poleForSerach == "Образование") {
+	if (poleForSearch == "Специализация") {
+		for (int i = 0; i < emp_vec.size(); i++) {
+			if (strForSearch == emp_vec[i].specialization) {
+				Print(row, i);
+				row++;
+			}
+		}
 
 	}
-	if (poleForSerach == "УО") {
-
+	if (poleForSearch == "Год окончания") {
+		try {
+			int _graduation_year = atoi(strForSearch.c_str());
+			for (int i = 0; i < emp_vec.size(); i++) {
+				if (_graduation_year == emp_vec[i].graduation_year) {
+					Print(row, i);
+					row++;
+				}
+			}
+		} catch (...) {
+			ShowMessage("Неверный ввод");
+		}
 	}
-	if (poleForSerach == "Специализация") {
+	if (poleForSearch == "День рождения") {
+		try {
+			istringstream ss(strForSearch.c_str());
+			string token;
+			int year, month, day;
 
-	}
-	if (poleForSerach == "Год окончания") {
+			getline(ss, token, '.');
+			year = stoi(token);
 
-	}
-	if (poleForSerach == "Телефон") {
+			getline(ss, token, '.');
+			month = stoi(token);
 
+			getline(ss, token, '.');
+			day = stoi(token);
+			for (int i = 0; i < emp_vec.size(); i++) {
+				if (year == emp_vec[i].birthdate_year && month == emp_vec[i].birthdate_month && day == emp_vec[i].birthdate_day) {
+					Print(row, i);
+					row++;
+				}
+			}
+		} catch (...) {
+			ShowMessage("Неверный ввод");
+		}
 	}
 }
 void __fastcall TfrmInfo::btnSearchClick(TObject *Sender)
@@ -187,4 +249,16 @@ void __fastcall TfrmInfo::btnClearClick(TObject *Sender)
 	frmInfo->updateStringGrid();
 }
 //---------------------------------------------------------------------------
+void __fastcall TfrmInfo::Print(int row, int i) {
+	stgMain->Cells[0][row] = emp_vec[i].login.c_str();
+	stgMain->Cells[1][row] = emp_vec[i].password.c_str();
+	stgMain->Cells[2][row] = emp_vec[i].role.c_str();
+	stgMain->Cells[3][row] = emp_vec[i].fio.c_str();
+	stgMain->Cells[4][row] = IntToStr(emp_vec[i].birthdate_year) + "." + IntToStr(emp_vec[i].birthdate_month) + "." + IntToStr(emp_vec[i].birthdate_day);
+	stgMain->Cells[5][row] = emp_vec[i].education.c_str();
+	stgMain->Cells[6][row] = emp_vec[i].institution.c_str();
+	stgMain->Cells[7][row] = emp_vec[i].specialization.c_str();
+	stgMain->Cells[8][row] = IntToStr(emp_vec[i].graduation_year);
+	stgMain->Cells[9][row] = emp_vec[i].telephone.c_str();
+}
 

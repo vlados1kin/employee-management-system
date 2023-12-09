@@ -32,6 +32,7 @@ __published:	// IDE-managed Components
 	void __fastcall btnSearchClick(TObject *Sender);
 	void __fastcall clearStringGrid();
 	void __fastcall btnClearClick(TObject *Sender);
+    void __fastcall Print(int row, int i);
 private:	// User declarations
 public:		// User declarations
 	__fastcall TfrmInfo(TComponent* Owner);

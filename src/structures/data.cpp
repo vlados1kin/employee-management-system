@@ -152,11 +152,14 @@ void SaveSalary(string path)
 bool CheckPassword(string login, string password)
 {
 	bool res = false;
+	int num = 0;
 	for (auto &temp : emp_vec) {
 		if (temp.login == login && temp.password == password) {
 			res = true;
 			emp_curr = temp;
+			emp_num = num;
 		}
+		num++;
 	}
 	return res;
 }
@@ -175,7 +178,7 @@ bool EmployeeExists(string login)
 vector<Employee> emp_vec;
 vector<Task> task_vec;
 vector<Salary> slr_vec;
-Employee emp_curr;
+Employee emp_curr, emp_temp;
 Task task_curr;
 Salary slr_curr;
-int emp_choice;
+int emp_choice, emp_num;

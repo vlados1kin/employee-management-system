@@ -1,6 +1,8 @@
 //---------------------------------------------------------------------------
 
 #include <vcl.h>
+#include <sstream>
+using namespace std;
 #pragma hdrstop
 
 #include "task.h"
@@ -82,6 +84,13 @@ void __fastcall TfrmTask::clear()
 void __fastcall TfrmTask::btnAddClick(TObject *Sender)
 {
 	emp_choice = -1;
+	AnsiString _login = cmbSearch->Text;
+	string login = string(_login.c_str());
+	for (auto &temp : emp_vec) {
+		if (temp.login == login) {
+			emp_temp = temp;
+		}
+	}
 	frmTask->Hide();
 	frmTaskEdit->Show();
 }
@@ -100,16 +109,64 @@ void __fastcall TfrmTask::btnEditClick(TObject *Sender)
 
 void __fastcall TfrmTask::btnDeleteClick(TObject *Sender)
 {
-//	task_vec.erase(task_vec.begin() + stgMain->Row-1);
-//	AnsiString _login = cmbSearch->Text;
-//	string login = string(_login.c_str());
-//	frmTask->update(login);
+	AnsiString _login = cmbSearch->Text;
+	string login = string(_login.c_str());
+	int year, month, day;
+	int s_hour, s_minute;
+    int e_hour, e_minute;
 
+	try {
+		istringstream ss(AnsiString(stgMain->Cells[0][stgMain->Row]).c_str());
+		string token;
+
+
+		getline(ss, token, '.');
+		year = stoi(token);
+
+		getline(ss, token, '.');
+		month = stoi(token);
+
+		getline(ss, token, '.');
+		day = stoi(token);
+
+		istringstream ps(AnsiString(stgMain->Cells[1][stgMain->Row]).c_str());
+
+
+		getline(ps, token, ':');
+		s_hour = stoi(token);
+
+		getline(ps, token, ':');
+		s_minute = stoi(token);
+
+		istringstream es(AnsiString(stgMain->Cells[2][stgMain->Row]).c_str());
+
+		getline(es, token, ':');
+		e_hour = stoi(token);
+
+		getline(es, token, ':');
+		e_minute = stoi(token);
+	} catch (...) {
+		//ShowMessage("Неверный ввод");
+	}
+
+	int i = 0;
+	int res = -1;
+	for (auto &temp : task_vec) {
+		if (temp.login == login && temp.date_year == year && temp.date_month == month && temp.date_day == day && temp.start_hour == s_hour && temp.start_minute == s_minute && temp.end_hour == e_hour && temp.end_minute == e_minute) {
+			res = i;
+		}
+		i++;
+	}
+	if (res != -1) {
+		task_vec.erase(task_vec.begin() + res);
+		frmTask->FormShow(Sender);
+	}
 }
 //---------------------------------------------------------------------------
 
 void __fastcall TfrmTask::FormShow(TObject *Sender)
 {
+    stgMain->RowCount = task_vec.size() + 1;
 	AnsiString _login = cmbSearch->Text;
 	string login = string(_login.c_str());
 	for (auto &temp : emp_vec) {

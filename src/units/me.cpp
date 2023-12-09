@@ -7,6 +7,7 @@
 #include "data.h"
 #include "admin.h"
 #include "main.h"
+#include "edit.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -51,5 +52,14 @@ void __fastcall TfrmMe::FormShow(TObject *Sender)
 	lblSpecialization->Caption = emp_curr.specialization.c_str();
 	lblGraduationYear->Caption = IntToStr(emp_curr.graduation_year);
 	lblTelephone->Caption = emp_curr.telephone.c_str();
+
 }
 //---------------------------------------------------------------------------
+void __fastcall TfrmMe::btnEditClick(TObject *Sender)
+{
+	emp_choice = emp_num;
+	frmMe->Hide();
+	frmEdit->Show();
+}
+//---------------------------------------------------------------------------
+

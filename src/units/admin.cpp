@@ -10,6 +10,7 @@
 #include "info.h"
 #include "task.h"
 #include "me.h"
+#include "salary.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -53,7 +54,8 @@ void __fastcall TfrmAdmin::btnTaskClick(TObject *Sender)
 
 void __fastcall TfrmAdmin::btnFinanceClick(TObject *Sender)
 {
-    //
+	frmSalary->Show();
+	frmAdmin->Hide();
 }
 //---------------------------------------------------------------------------
 

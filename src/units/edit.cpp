@@ -10,6 +10,7 @@
 #include "info.h"
 #include "main.h"
 #include "data.h"
+#include "me.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -69,13 +70,24 @@ void __fastcall TfrmEdit::btnEnterClick(TObject* Sender)
 //---------------------------------------------------------------------------
 void __fastcall TfrmEdit::FormClose(TObject* Sender, TCloseAction &Action)
 {
-    frmInfo->Show();
+	if (emp_curr.role == "admin") {
+		frmInfo->Show();
+	} else {
+		frmMe->Show();
+	}
+
 }
 //---------------------------------------------------------------------------
 void __fastcall TfrmEdit::btnExitClick(TObject* Sender)
 {
-    frmInfo->Show();
-    frmEdit->Close();
+	if (emp_curr.role == "admin") {
+		frmInfo->Show();
+		frmEdit->Close();
+	} else {
+		frmMe->Show();
+		frmEdit->Close();
+    }
+
 }
 //---------------------------------------------------------------------------
 
@@ -108,6 +120,19 @@ void __fastcall TfrmEdit::updateForm()
 		editSpecialization->Text = emp_vec[emp_choice].specialization.c_str();
 		editGraduationYear->Text = emp_vec[emp_choice].graduation_year;
 		editTelephone->Text = emp_vec[emp_choice].telephone.c_str();
-    }
+	}
+	if (emp_curr.role == "user") {
+		editLogin->Enabled = false;
+		editPassword->Enabled = false;
+		boxRole->Enabled = false;
+	} else {
+		editLogin->Enabled = true;
+		editPassword->Enabled = true;
+		if (emp_curr.login != AnsiString(editLogin->Text).c_str()) {
+			boxRole->Enabled = true;
+		} else {
+			boxRole->Enabled = false;
+		}
 
+	}
 }

@@ -27,7 +27,7 @@ __fastcall TfrmMain::TfrmMain(TComponent* Owner)
 //---------------------------------------------------------------------------
 void __fastcall TfrmMain::btnEnterClick(TObject *Sender)
 {
-    frmMain->nextForm();
+	frmMain->nextForm();
 }
 //---------------------------------------------------------------------------
 void __fastcall TfrmMain::btnExitClick(TObject *Sender)
@@ -68,9 +68,11 @@ void __fastcall TfrmMain::nextForm()
 
 	if (CheckPassword(login, password)) {
 		if (emp_curr.role == "admin") {
+			frmMe->btnEdit->Visible = false;
 			frmAdmin->Show();
 			frmMain->Hide();
 		} else {
+			frmMe->btnEdit->Visible = true;
 			frmMe->Show();
 			frmMain->Hide();
 		}

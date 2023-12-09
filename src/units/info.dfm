@@ -66,7 +66,7 @@ object frmInfo: TfrmInfo
     OnClick = btnEditClick
   end
   object btnExit: TButton
-    Left = 332
+    Left = 251
     Top = 11
     Width = 75
     Height = 23
@@ -75,7 +75,7 @@ object frmInfo: TfrmInfo
     OnClick = btnExitClick
   end
   object cmbSearch: TComboBox
-    Left = 413
+    Left = 332
     Top = 11
     Width = 145
     Height = 23
@@ -83,14 +83,14 @@ object frmInfo: TfrmInfo
     TabOrder = 5
   end
   object editSearch: TEdit
-    Left = 564
+    Left = 483
     Top = 11
     Width = 121
     Height = 23
     TabOrder = 6
   end
   object btnSearch: TButton
-    Left = 251
+    Left = 610
     Top = 11
     Width = 75
     Height = 23
