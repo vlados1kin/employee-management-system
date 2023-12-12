@@ -6,6 +6,7 @@
 #include "salaryedit.h"
 #include "salary.h"
 #include "data.h"
+#include "main.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"

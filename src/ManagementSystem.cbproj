@@ -187,22 +187,15 @@
             <DependentOn>units\taskedit.h</DependentOn>
             <BuildOrder>9</BuildOrder>
         </CppCompile>
-        <CppCompile Include="units\user.cpp">
-            <Form>frmUser</Form>
-            <FormType>dfm</FormType>
-            <DependentOn>units\user.h</DependentOn>
-            <BuildOrder>3</BuildOrder>
-        </CppCompile>
+        <FormResources Include="units\salaryedit.dfm"/>
         <FormResources Include="units\salary.dfm"/>
         <FormResources Include="units\me.dfm"/>
-        <FormResources Include="units\info.dfm"/>
-        <FormResources Include="units\user.dfm"/>
         <FormResources Include="units\taskedit.dfm"/>
         <FormResources Include="units\task.dfm"/>
+        <FormResources Include="units\info.dfm"/>
         <FormResources Include="main.dfm"/>
         <FormResources Include="units\edit.dfm"/>
         <FormResources Include="units\admin.dfm"/>
-        <FormResources Include="units\salaryedit.dfm"/>
         <BuildConfiguration Include="Base">
             <Key>Base</Key>
         </BuildConfiguration>

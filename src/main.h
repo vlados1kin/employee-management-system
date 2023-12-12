@@ -7,6 +7,10 @@
 #include <Vcl.Controls.hpp>
 #include <Vcl.StdCtrls.hpp>
 #include <Vcl.Forms.hpp>
+#include <Vcl.ExtCtrls.hpp>
+#include <Vcl.Imaging.jpeg.hpp>
+#include <System.ImageList.hpp>
+#include <Vcl.ImgList.hpp>
 
 //---------------------------------------------------------------------------
 class TfrmMain : public TForm
@@ -19,6 +23,7 @@ __published:	// IDE-managed Components
 	TButton *btnExit;
 	TButton *btnShow;
 	TEdit *editPassword;
+	TImageList *ImageList1;
 	void __fastcall btnEnterClick(TObject *Sender);
 	void __fastcall btnExitClick(TObject *Sender);
 	void __fastcall btnShowClick(TObject *Sender);

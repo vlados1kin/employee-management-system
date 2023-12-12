@@ -1,19 +1,7 @@
-3
-wsx
-wsx
-admin
-0111www
-0
-0
-0
-0
-0
-0
-0
-0
+12
 vladlash
 1234
-admin
+user
 Влад Лашкин
 2004
 9
@@ -23,15 +11,135 @@ admin
 Программист
 2022
 +375-29-123-45-67
-
-
+admin
+admin
+admin
+Петр Петрович
+1960
+4
+15
+Среднее
+ПМГУ
+Столяр
+1979
++375-29-121-21-21
+jsmith
+Password123
 user
-dadada
-2004
-9
-26
+John Smith
+1985
+5
+15
 Высшее
-БГУИР
-Программист
-2022
+ABC University
+Менеджмент
+2007
 +375-29-123-45-67
+mmiller
+SecurePass789
+user
+Maria Miller
+1990
+11
+25
+Высшее
+XYZ College
+Маркетинг
+2012
++375-44-234-56-78
+adavis
+StrongPassword456
+user
+Alex Davis
+1988
+8
+10
+Среднее
+QWE Institute
+IT технологии
+2009
++375-33-345-67-89
+kwilliams
+SecretPass!23
+admin
+Kate Williams
+1987
+9
+3
+Высшее
+EFG University
+Финансы
+2010
++375-25-456-78-90
+rperez
+Perez2023@
+user
+Roberto Perez
+1983
+12
+20
+Высшее
+LMN College
+Логистика
+2005
++375-29-567-89-01
+cjohnson
+CJPassWord!
+user
+Claire Johnson
+1992
+7
+12
+Среднее специальное
+OPQ Institute
+Дизайн
+2014
++375-44-678-90-12
+blee
+LeePass456
+user
+Brian Lee
+1980
+4
+28
+Высшее
+RST University
+HR
+2003
++375-33-789-01-23
+mmurphy
+MurphyPass!
+user
+Megan Murphy
+1995
+6
+17
+Среднее специальное
+UVW College
+Программирование
+2016
++375-25-890-12-34
+dsmith
+SmithD12345
+user
+David Smith
+1977
+11
+5
+Высшее
+XYZ University
+Маркетинг
+2000
++375-29-901-23-45
+jgarcia
+GarciaPass987
+user
+Julia Garcia
+1986
+2
+14
+Среднее
+ABCD School
+Административная работа
+2003
++375-44-012-34-56

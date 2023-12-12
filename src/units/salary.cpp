@@ -7,6 +7,7 @@
 #include "data.h"
 #include "salaryedit.h"
 #include "admin.h"
+#include "main.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -15,10 +16,7 @@ TfrmSalary *frmSalary;
 __fastcall TfrmSalary::TfrmSalary(TComponent* Owner)
 	: TForm(Owner)
 {
-	for (auto &temp : emp_vec) {
-		cmbSearch->Items->Add(temp.login.c_str());
-	}
-	cmbSearch->ItemIndex = 0;
+    cmbSearch->ItemIndex = 0;
 }
 //---------------------------------------------------------------------------
 void __fastcall TfrmSalary::btnSearchClick(TObject *Sender)
@@ -92,6 +90,10 @@ void __fastcall TfrmSalary::FormClose(TObject *Sender, TCloseAction &Action)
 
 void __fastcall TfrmSalary::FormShow(TObject *Sender)
 {
+	cmbSearch->Clear();
+	for (auto &temp : emp_vec) {
+		cmbSearch->Items->Add(temp.login.c_str());
+	}
     stgMain->RowCount = task_vec.size() + 1;
 	AnsiString _login = cmbSearch->Text;
 	string login = string(_login.c_str());

@@ -16,14 +16,12 @@ __published:	// IDE-managed Components
 	TLabel *lblLogin;
 	TEdit *editLogin;
 	TLabel *lblDescription;
-	TLabel *lblCompleted;
 	TLabel *lblDate;
 	TLabel *lblStart;
 	TLabel *lblEnd;
 	TMaskEdit *editDate;
 	TMaskEdit *editStart;
 	TMaskEdit *editEnd;
-	TCheckBox *cbxCompleted;
 	TButton *btnSave;
 	TMemo *editDescription;
 	void __fastcall btnExitClick(TObject *Sender);

@@ -8,6 +8,7 @@ using namespace std;
 #include "taskedit.h"
 #include "task.h"
 #include "data.h"
+#include "main.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -34,7 +35,6 @@ void __fastcall TfrmTaskEdit::Update()
 	if (emp_choice == -1) {
 		editLogin->Text = emp_temp.login.c_str();
 		editDescription->Text = "";
-		cbxCompleted->Checked = false;
 	} else {
 
 	}
@@ -65,7 +65,7 @@ void __fastcall TfrmTaskEdit::btnSaveClick(TObject *Sender)
 		temp.end_minute = stoi(str) % 100;
 		temp.login = AnsiString(editLogin->Text);
 		temp.description = AnsiString(editDescription->Text);
-		temp.completed = cbxCompleted->Checked;
+		temp.completed = false;
 	} catch (...) {
 
 	}

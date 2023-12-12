@@ -9,6 +9,7 @@ using namespace std;
 #include "admin.h"
 #include "data.h"
 #include "taskedit.h"
+#include "main.h"
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 #pragma resource "*.dfm"
@@ -17,10 +18,7 @@ TfrmTask *frmTask;
 __fastcall TfrmTask::TfrmTask(TComponent* Owner)
 	: TForm(Owner)
 {
-	for (auto &temp : emp_vec) {
-		cmbSearch->Items->Add(temp.login.c_str());
-	}
-	cmbSearch->ItemIndex = 0;
+    cmbSearch->ItemIndex = 0;
 }
 //---------------------------------------------------------------------------
 void __fastcall TfrmTask::btnExitClick(TObject *Sender)
@@ -166,7 +164,11 @@ void __fastcall TfrmTask::btnDeleteClick(TObject *Sender)
 
 void __fastcall TfrmTask::FormShow(TObject *Sender)
 {
-    stgMain->RowCount = task_vec.size() + 1;
+	cmbSearch->Clear();
+	for (auto &temp : emp_vec) {
+		cmbSearch->Items->Add(temp.login.c_str());
+	}
+	stgMain->RowCount = task_vec.size() + 1;
 	AnsiString _login = cmbSearch->Text;
 	string login = string(_login.c_str());
 	for (auto &temp : emp_vec) {

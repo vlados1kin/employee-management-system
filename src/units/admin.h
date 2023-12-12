@@ -7,6 +7,8 @@
 #include <Vcl.Controls.hpp>
 #include <Vcl.StdCtrls.hpp>
 #include <Vcl.Forms.hpp>
+#include <Vcl.ExtCtrls.hpp>
+#include <Vcl.Imaging.pngimage.hpp>
 //---------------------------------------------------------------------------
 class TfrmAdmin : public TForm
 {
@@ -17,6 +19,7 @@ __published:	// IDE-managed Components
 	TButton *btnTask;
 	TButton *btnFinance;
 	TButton *btnMe;
+	TImage *Image1;
 	void __fastcall FormClose(TObject *Sender, TCloseAction &Action);
 	void __fastcall btnExitClick(TObject *Sender);
 	void __fastcall btnInfoClick(TObject *Sender);

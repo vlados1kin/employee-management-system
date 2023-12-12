@@ -10,7 +10,8 @@ using namespace std;
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
 
-void ReadEmployee(string path) {
+void ReadEmployee(string path)
+{
 	ifstream inFile;
 	inFile.open(path);
 
@@ -58,7 +59,8 @@ void SaveEmployee(string path)
 	outFile.close();
 }
 
-void ReadTask(string path) {
+void ReadTask(string path)
+{
 	ifstream inFile;
 	inFile.open(path);
 
@@ -113,7 +115,8 @@ void SaveTask(string path)
 	outFile.close();
 }
 
-void ReadSalary(string path) {
+void ReadSalary(string path)
+{
 	ifstream inFile;
 	inFile.open(path);
 
