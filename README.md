@@ -8,7 +8,3 @@ This repository contains a RESTful API to interact with a PostgreSQL database th
 - **PostgreSQL**
 
 ## Implemented features
-
-1. 
-2. 
-3. 
