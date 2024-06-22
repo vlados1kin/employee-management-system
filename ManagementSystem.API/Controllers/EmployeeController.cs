@@ -1,4 +1,5 @@
 ﻿using ManagementSystem.API.Domain;
+using ManagementSystem.API.Exceptions;
 using ManagementSystem.API.Services;
 using Microsoft.AspNetCore.Mvc;
 
@@ -9,12 +10,12 @@ namespace ManagementSystem.API.Controllers;
 public class EmployeeController : ControllerBase
 {
     private readonly EmployeeService _employeeService;
-    
+
     public EmployeeController(EmployeeService employeeService)
     {
         _employeeService = employeeService;
     }
-    
+
     [HttpGet]
     public IEnumerable<Employee> GetAll()
     {
@@ -37,38 +38,44 @@ public class EmployeeController : ControllerBase
     [HttpPost]
     public IActionResult Post(Employee employee)
     {
-        Guid? guid = _employeeService.PostEmployee(employee);
-        if (guid != null)
+        try
         {
+            _employeeService.PostEmployee(employee);
             return Created();
         }
-
-        return Conflict();
+        catch (EmployeeException e)
+        {
+            return Conflict();
+        }
     }
 
     [HttpPut]
     [Route("{id}")]
     public IActionResult Put(Guid id, Employee employee)
     {
-        Guid? guid = _employeeService.PutEmployee(id, employee);
-        if (guid != null)
+        try
         {
+            _employeeService.PutEmployee(id, employee);
             return Ok();
         }
-
-        return NotFound();
+        catch (Exception e)
+        {
+            return NotFound();
+        }
     }
 
     [HttpDelete]
     [Route("{id}")]
     public IActionResult Delete(Guid id)
     {
-        Guid? guid = _employeeService.DeleteEmployee(id);
-        if (guid != null)
+        try
         {
+            _employeeService.DeleteEmployee(id);
             return Ok();
         }
-
-        return NotFound();
+        catch (Exception e)
+        {
+            return NotFound();
+        }
     }
 }
