@@ -22,39 +22,36 @@ public class EmployeeService
         return _employees[index];
     }
 
-    public Guid? PostEmployee(Employee employee)
+    public void PostEmployee(Employee employee)
     {
         int index = _employees.FindIndex(e => e.Id == employee.Id);
         if (index >= 0)
         {
-            return null;
+            throw new Exception("An employee with this Id already exists");
         }
         
         _employees.Add(employee);
-        return employee.Id;
     }
 
-    public Guid? PutEmployee(Guid id, Employee employee)
+    public void PutEmployee(Guid id, Employee employee)
     {
         int index = _employees.FindIndex(e => e.Id == id);
         if (index < 0)
         {
-            return null;
+            throw new Exception("An employee with this Id does not exist");
         }
 
         _employees[index] = employee;
-        return id;
     }
 
-    public Guid? DeleteEmployee(Guid id)
+    public void DeleteEmployee(Guid id)
     {
         int index = _employees.FindIndex(e => e.Id == id);
         if (index < 0)
         {
-            return null;
+            throw new Exception("An employee with this Id does not exist");
         }
         
         _employees.RemoveAt(index);
-        return id;
     }
 }
