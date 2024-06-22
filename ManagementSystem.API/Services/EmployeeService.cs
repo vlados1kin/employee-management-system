@@ -1,4 +1,5 @@
 ﻿using ManagementSystem.API.Domain;
+using ManagementSystem.API.Exceptions;
 
 namespace ManagementSystem.API.Services;
 
@@ -27,7 +28,7 @@ public class EmployeeService
         int index = _employees.FindIndex(e => e.Id == employee.Id);
         if (index >= 0)
         {
-            throw new Exception("An employee with this Id already exists");
+            throw new EmployeeException("An employee with this Id already exists");
         }
         
         _employees.Add(employee);
@@ -38,7 +39,7 @@ public class EmployeeService
         int index = _employees.FindIndex(e => e.Id == id);
         if (index < 0)
         {
-            throw new Exception("An employee with this Id does not exist");
+            throw new EmployeeException("An employee with this Id does not exist");
         }
 
         _employees[index] = employee;
@@ -49,7 +50,7 @@ public class EmployeeService
         int index = _employees.FindIndex(e => e.Id == id);
         if (index < 0)
         {
-            throw new Exception("An employee with this Id does not exist");
+            throw new EmployeeException("An employee with this Id does not exist");
         }
         
         _employees.RemoveAt(index);
